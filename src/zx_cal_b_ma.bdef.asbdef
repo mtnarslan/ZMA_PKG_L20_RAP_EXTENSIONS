@@ -1,0 +1,11 @@
+extension implementation in class zbp_x_cal_b_ma unique;
+
+extend behavior for CalibrationRequest
+{
+  validation ZZcheckResultCode on save
+
+  {
+    create;
+    field ResultCode;
+  }
+}
