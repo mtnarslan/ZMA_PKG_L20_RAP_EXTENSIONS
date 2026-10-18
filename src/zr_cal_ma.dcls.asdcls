@@ -1,0 +1,10 @@
+@EndUserText.label: 'Calibration Root Access Control'
+@MappingRole: true
+define role ZR_CAL_MA {
+    grant
+        select
+            on
+                ZR_CAL_MA
+                    where
+                       ResponsibleUser = aspect user;
+}

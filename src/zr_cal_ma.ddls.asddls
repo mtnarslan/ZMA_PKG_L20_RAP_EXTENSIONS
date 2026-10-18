@@ -1,4 +1,4 @@
-@AccessControl.authorizationCheck: #NOT_REQUIRED
+@AccessControl.authorizationCheck: #CHECK
 @EndUserText.label: 'Calibration Data Definition'
 @AbapCatalog.viewEnhancementCategory: [#PROJECTION_LIST]
 @AbapCatalog.extensibility:{
@@ -16,7 +16,12 @@ define root view entity ZR_CAL_MA
       Calibration.instrument_code       as InstrumentCode,
       Calibration.result_code           as ResultCode,
       Calibration.calibration_note      as CalibrationNote,
+      Calibration.responsible_user      as ResponsibleUser,
+      
       
       @Semantics.systemDateTime.localInstanceLastChangedAt: true
-      Calibration.local_last_changed_at as LocalLastChangedAt
+      Calibration.local_last_changed_at as LocalLastChangedAt,
+      
+      @Semantics.systemDateTime.lastChangedAt: true
+      Calibration.last_changed_at as LastChangedAt
 }

@@ -19,7 +19,7 @@ CLASS lhc_CalibrationRequest IMPLEMENTATION.
        LOOP AT requests INTO DATA(request).
 
            IF request-ResultCode <> 'P' AND
-              request-ResultCode <> 'N'.
+              request-ResultCode <> 'F'.
 
              APPEND VALUE #(
                 %tky = request-%tky
@@ -29,7 +29,7 @@ CLASS lhc_CalibrationRequest IMPLEMENTATION.
                  %tky = request-%tky
                  %msg = new_message_with_text(
                     severity = if_abap_behv_message=>severity-error
-                    text = 'Result Code must be P or N'
+                    text = 'Result Code must be P or F'
                  )
             %element-Resultcode = if_abap_behv=>mk-on
               ) TO reported-calibrationrequest.

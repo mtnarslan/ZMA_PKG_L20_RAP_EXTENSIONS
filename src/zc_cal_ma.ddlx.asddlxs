@@ -1,0 +1,82 @@
+
+@Metadata.layer: #CORE
+
+@UI.headerInfo: {
+    typeName: 'Calibration Request',
+    typeNamePlural: 'Calibration Requests',
+    title: {
+        type: #STANDARD,
+        value: 'InstrumentCode'
+    },
+    description: {
+        value: 'ResultCode'
+    }
+}
+
+annotate entity ZC_CAL_MA with
+{
+    @UI.facet: [
+        {
+            id: 'CalibrationDetails',
+            purpose: #STANDARD,
+            type: #IDENTIFICATION_REFERENCE,
+            label: 'Calibration Details',
+            position: 10
+        }
+    ]
+
+    @UI.hidden: true
+    Uuid;
+
+    @UI.lineItem: [
+        { position: 10, label: 'Instrument Code' }
+    ]
+    @UI.identification: [
+        { position: 10, label: 'Instrument Code' }
+    ]
+    @UI.selectionField: [
+        { position: 10 }
+    ]
+    InstrumentCode;
+
+    @UI.lineItem: [
+        { position: 20, label: 'Result Code' }
+    ]
+    @UI.identification: [
+        { position: 20, label: 'Result Code' }
+    ]
+    @UI.selectionField: [
+        { position: 20 }
+    ]
+    ResultCode;
+
+    @UI.lineItem: [
+        { position: 30, label: 'Responsible User' }
+    ]
+    @UI.identification: [
+        { position: 30, label: 'Responsible User' }
+    ]
+    ResponsibleUser;
+
+    @UI.lineItem: [
+        { position: 40, label: 'Calibration Note' }
+    ]
+    @UI.identification: [
+        { position: 40, label: 'Calibration Note' }
+    ]
+    CalibrationNote;
+
+     @UI.lineItem: [
+        { position: 50, label: 'Calibration Resultt' }
+    ]
+    @UI.identification: [
+        { position: 50, label: 'Result ' }
+    ]
+    CalibrationResult;
+
+    @UI.hidden: true
+    LocalLastChangedAt;
+
+    @UI.hidden: true
+    LastChangedAt;
+}

@@ -1,7 +1,7 @@
 
 extend view entity ZR_CAL_MA with 
 {
-  @EndUserText.label: 'Result Calibration extended definition'
+  @EndUserText.label: ' Calibration Resulttttt '
   case 
     when Calibration.result_code = 'P'  
       then cast('Passed' as abap.char(12))

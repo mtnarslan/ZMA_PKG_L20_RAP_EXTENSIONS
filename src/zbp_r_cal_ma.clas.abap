@@ -1,15 +1,5 @@
-class ZBP_R_CAL_MA definition
-  public
-  abstract
-  final
-  create public .
-
-public section.
-protected section.
-private section.
+CLASS zbp_r_cal_ma DEFINITION PUBLIC ABSTRACT FINAL FOR BEHAVIOR OF zr_cal_ma.
 ENDCLASS.
 
-
-
-CLASS ZBP_R_CAL_MA IMPLEMENTATION.
+CLASS zbp_r_cal_ma IMPLEMENTATION.
 ENDCLASS.

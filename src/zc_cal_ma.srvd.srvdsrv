@@ -1,0 +1,4 @@
+@EndUserText.label: 'Projection Access Control'
+define service ZC_CAL_MA {
+  expose ZC_CAL_MA;
+}
