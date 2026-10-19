@@ -20,5 +20,7 @@ provider contract transactional_query
     LocalLastChangedAt,
     LastChangedAt,
     
-    ZZResultLabelZ20 as CalibrationResult
+    ZZResultLabelZ20 as CalibrationResult // "as CalibrationResult" is optional.Because,it is already defined 
+                                          //  as enduser text label such as "@EndUserText.label: ' Calibration Result! '" 
+                                          //  in "zx_cal_v_ma".
 }
